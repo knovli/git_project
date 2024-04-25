@@ -153,7 +153,6 @@ class MineBoard:
 game = MineBoard(0, 0, 0)
 
 
-
 async def echo(update, context):
     global game
     if (len(update.message.text.split()) == 3 and update.message.text.split()[2] != "F"):
@@ -203,6 +202,7 @@ def main():
     text_handler = MessageHandler(filters.TEXT, echo)
     application.add_handler(text_handler)
     application.run_polling()
+
 
 if __name__ == "__main__":
     main()
