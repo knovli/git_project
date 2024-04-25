@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import logging
 from telegram.ext import Application, MessageHandler, filters, CommandHandler
 import random
@@ -27,7 +26,6 @@ class MineBoard:
     cells_to_open: int
 
     def __init__(self, w: int, h: int, k: int) -> None:
-        # Create a new board with size w x h
         self.w = w
         self.h = h
         self.board = [[0 for _ in range(w)] for _ in range(h)]
